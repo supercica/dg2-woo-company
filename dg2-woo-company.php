@@ -2,11 +2,11 @@
 
 /**
  * Plugin Name: DG2 Woocommerce Company Fields
- * Plugin URI: https://digital2.rs
+ * Plugin URI: 
  * Description: A Dg2 checkout company for WooCommerce
  * Verison: 1.0.0
- * Author: Digital2
- * Author uRI: https://digital2.rs
+ * Author: DG2
+ * Author URI: 
  * Text Domain: dg2-woo-company
  */
 
