@@ -191,22 +191,12 @@ class WooCompany
         // check for errors
         if (!empty($errors->get_error_codes())) {
 
-            // remove the one you don't wont to validate
-            foreach ($errors->get_error_codes() as $code) {
-                if (in_array($code, ['pib_ime_firme_required', 'pib_adresa_firme_required', 'pib_pib_required', 'pib_mb_required'])) {
-                    $errors->remove($code);
-                }
-            }
-            // add company fields to validate only if Company is chosen
-            if (isset($_POST['pib_racun']) && ($_POST['pib_racun'] == 2)) {
-                if (empty($_POST['pib_ime_firme'])) {
-                    $errors->add('validation', sprintf(__('%s is a required field.', 'dg2-woo-company'), '<strong>' . esc_html__('Company name', 'dg2-woo-company') . '</strong>'));
-                }
-                if (empty($_POST['pib_pib'])) {
-                    $errors->add('validation', sprintf(__('%s is a required field.', 'dg2-woo-company'), '<strong>' . esc_html__('Company PIB', 'dg2-woo-company') . '</strong>'));
-                }
-                if (empty($_POST['pib_mb'])) {
-                    $errors->add('validation', sprintf(__('%s is a required field.', 'dg2-woo-company'), '<strong>' . esc_html__('Company MB', 'dg2-woo-company') . '</strong>'));
+            if (isset($_POST['pib_racun']) && ($_POST['pib_racun'] == 1)) {
+
+                foreach ($errors->get_error_codes() as $code) {
+                    if (in_array($code, ['pib_ime_firme_required', 'pib_adresa_firme_required', 'pib_pib_required', 'pib_mb_required'])) {
+                        $errors->remove($code);
+                    }
                 }
             }
         }
