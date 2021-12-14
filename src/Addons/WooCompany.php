@@ -108,14 +108,14 @@ class WooCompany
             update_post_meta($order_id, 'pib_racun', esc_attr($_POST['pib_racun']));
         }
         if ($_POST['pib_ime_firme']) {
-            update_post_meta($order_id, 'pib_ime_firme', esc_attr($_POST['pl_ime_firme']));
+            update_post_meta($order_id, 'pib_ime_firme', esc_attr($_POST['pib_ime_firme']));
         }
 
         if ($_POST['pib_pib']) {
-            update_post_meta($order_id, 'pib_pib', esc_attr($_POST['pl_pib']));
+            update_post_meta($order_id, 'pib_pib', esc_attr($_POST['pib_pib']));
         }
         if ($_POST['pib_mb']) {
-            update_post_meta($order_id, 'pib_mb', esc_attr($_POST['pl_mb']));
+            update_post_meta($order_id, 'pib_mb', esc_attr($_POST['pib_mb']));
         }
     }
 
